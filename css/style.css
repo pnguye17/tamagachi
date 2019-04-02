@@ -1,0 +1,42 @@
+body  {
+    background-image: url("/Users/peternguyen/Desktop/SEI/APRIL/Labs/Tomagotchi-Mini-Project/Photos/farm-cartoon-landscape-vector.jpg");
+
+}
+
+header {
+    text-align: center;
+}
+
+.creating {
+    text-align: center
+}
+
+img {
+    padding-left: 250px;
+    margin-left: 250px;
+    border-left: 250px;
+    margin-top: 150px;
+    visibility: hidden;
+}
+
+
+/* progress {
+    align-self: center
+} */
+/* section #monster {
+    align-content: center
+} */
+/* 
+.btn { */
+
+/* button {
+    visibility: hidden
+} */
+
+
+
+/* #monster {
+    visibility: hidden;
+} */
+
+    
