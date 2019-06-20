@@ -1,5 +1,5 @@
-body  {
-    background-image: url("/Photos/farm-cartoon-landscape-vector.jpg")
+body {
+    background-color: aqua
 }
 
 header {
@@ -18,21 +18,17 @@ img {
     visibility: hidden;
 }
 
-
-/* progress {
+/* 
+progress {
     align-self: center
-} */
-/* section #monster {
+}
+section #monster {
     align-content: center
 } */
-/* 
-.btn { */
 
 /* button {
     visibility: hidden
 } */
-
-
 
 /* #monster {
     visibility: hidden;
