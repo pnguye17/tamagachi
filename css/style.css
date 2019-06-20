@@ -1,5 +1,6 @@
 body {
-    background-color: aqua
+    background-image: url('../public/Photos/fantastic-rainbow-1055846.jpg');
+    width: 100px
 }
 
 header {
@@ -18,10 +19,7 @@ img {
     visibility: hidden;
 }
 
-/* 
-progress {
-    align-self: center
-}
+prre
 section #monster {
     align-content: center
 } */
