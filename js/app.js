@@ -31,20 +31,14 @@ class Animals {
         }
     }
     sleepy() {
-        console.log("this is a function")
+        let x = petArray[0].sleepy - 1
+        $sleepy.val(x)
+        $displaysleep.text(`Sleepiness is ${x}`)
+        
     }
 }
 
 let petArray = []
-const createPet = () =>{
-    let nameInput = prompt("what is your pet's name?")
-    const $baby = $('#monster')
-    $baby.css("visibility", "visible")
-    const pet = new Animals(`${nameInput}`)
-    petArray.push(pet)
-
-
-}
 
 const $boredom = $('#boredom')
 const $displayboredom = $('<h3/>')
@@ -55,24 +49,39 @@ const $displayhunger = $('<h3/>')
 const $sleepy = $('#sleepy')
 const $displaysleep = $('<h3/>')
 
-$('#tomagachi').on('click', (e) => {
+const createPet = () =>{
+    let nameInput = prompt("what is your pet's name?")
+    const $baby = $('#monster')
+    const $statusBar = $('.status')
+    $baby.css("visibility", "visible")
+    $statusBar.css("visibility", "visible")
+
+    const pet = new Animals(`${nameInput}`)
+    petArray.push(pet)
+
+
+}
+
+
+$('#tomagachi').on('click', () => {
     createPet()
-   
-    $boredom.val(petArray[0].boredom)
-    $displayboredom.text(`Boredom is ${petArray[0].boredom}`)
-    $('#boredom').before($displayboredom)
 
-    $hunger.val(petArray[0].hunger)
-    $displayhunger.text(`Hunger is ${petArray[0].hunger}`)
-    $('#hunger').before($displayhunger)
+    setInterval(() => {
+        petArray[0].boredom + 1
+        $boredom.val(petArray[0].boredom)
+        $displayboredom.text(`Boredom is ${petArray[0].boredom}`)
+        $('#boredom').before($displayboredom)
 
-    $sleepy.val(petArray[0].sleepy)
-    $displaysleep.text(`Sleepiness is ${petArray[0].sleepy}`)
-    $('#sleepy').before($displaysleep)
-    console.log(petArray[0])
+        petArray[0].sleepy + 1
+        $sleepy.val(petArray[0].sleepy)
+        $displaysleep.text(`Sleepiness is ${petArray[0].sleepy}`)
+        $('#sleepy').before($displaysleep)
 
-
-
+        petArray[0].hunger + 1
+        $hunger.val(petArray[0].hunger)
+        $displayhunger.text(`Hunger is ${petArray[0].hunger}`)
+        $('#hunger').before($displayhunger)
+    }, 1000)
 })
 
 $('#hungry').on("click", () => {
@@ -84,20 +93,15 @@ $('#hungry').on("click", () => {
 })
 
 
-$('#tired').on("click", () => {
-    petArray[0].sleepy()
-    $sleepy.val(petArray[0].sleepy)
-    $displaysleep.text(`Sleepiness is ${petArray[0].sleepy}`)
-
-})
-
 $('#bored').on("click", () => {
     petArray[0].bored()
     $boredom.val(petArray[0].boredom)
     $displayboredom.text(`Boredom is ${petArray[0].boredom}`)
 })
 
+$('#tired').on("click", () => {
 
 
+})
 
 
